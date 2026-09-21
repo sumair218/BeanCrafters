@@ -541,53 +541,190 @@ a {
 
 /* ---------- Store locator ---------- */
 .store {
+  max-width: 1220px;
+  margin: 0 auto;
   padding: 40px 24px 0;
-  text-align: center;
 }
 
-.store h2 {
+.join-header {
+  text-align: center;
+  margin-bottom: 28px;
+}
+
+.join-header h2 {
   font-family: var(--font-serif);
   font-weight: 700;
-  font-size: clamp(2rem, 4vw, 2.8rem);
-  margin-bottom: 8px;
+  font-size: clamp(2.1rem, 4vw, 3rem);
+  margin: 0;
 }
 
-.store > p {
-  color: var(--gray-text);
-  margin-bottom: 36px;
-}
-
-.store-image {
-  max-width: var(--max-width);
-  margin: 0 auto;
-  border-radius: var(--radius-lg);
-  overflow: hidden;
-}
-
-.store-image img {
-  width: 100%;
-  height: 460px;
-  object-fit: cover;
-}
-
-.store-details {
-  max-width: var(--max-width);
-  margin: 0 auto;
-  padding: 40px 0 100px;
+.join-wrap {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 32px 40px;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 28px;
+  align-items: stretch;
 }
 
-.store-details h3 {
-  font-size: 16px;
+.join-card {
+  background: rgba(255, 255, 255, 0.82);
+  border: 1px solid rgba(58, 51, 46, 0.08);
+  border-radius: 28px;
+  box-shadow: 0 18px 26px rgba(32, 28, 25, 0.08);
+  padding: 28px;
+}
+
+.contact-card h3 {
+  font-size: 1.6rem;
+  margin-bottom: 18px;
+}
+
+.contact-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px 18px;
+}
+
+.contact-item {
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(32, 28, 25, 0.08);
+}
+
+.contact-item span {
+  display: block;
+  font-size: 11px;
   font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--gray-text);
   margin-bottom: 6px;
 }
 
-.store-details p {
-  font-size: 14px;
+.contact-item p {
+  font-size: 0.96rem;
+  color: var(--dark-text);
+  line-height: 1.5;
+}
+
+.join-btn {
+  margin-top: 22px;
+}
+
+.map-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 420px;
+  background: linear-gradient(180deg, rgba(255,255,255,0.92), rgba(246, 235, 214, 0.85));
+}
+
+.map-visual {
+  position: relative;
+  flex: 1;
+  min-height: 310px;
+  border-radius: 22px;
+  background:
+    linear-gradient(90deg, rgba(255,255,255,0.15) 0, rgba(255,255,255,0.15) 1px, transparent 1px, transparent 38px),
+    linear-gradient(rgba(255,255,255,0.15) 0, rgba(255,255,255,0.15) 1px, transparent 1px, transparent 38px),
+    #eae6dc;
+  background-size: 38px 38px, 38px 38px, auto;
+  overflow: hidden;
+  border: 1px solid rgba(32, 28, 25, 0.08);
+}
+
+.map-road {
+  position: absolute;
+  background: rgba(122, 111, 98, 0.22);
+  border-radius: 999px;
+}
+
+.road-1 {
+  width: 70%;
+  height: 10px;
+  left: 8%;
+  top: 38%;
+  transform: rotate(18deg);
+}
+
+.road-2 {
+  width: 78%;
+  height: 10px;
+  right: 8%;
+  top: 55%;
+  transform: rotate(-20deg);
+}
+
+.road-3 {
+  width: 62%;
+  height: 10px;
+  left: 18%;
+  top: 68%;
+  transform: rotate(-8deg);
+}
+
+.map-pin {
+  position: absolute;
+  left: 50%;
+  top: 48%;
+  transform: translate(-50%, -50%);
+  display: grid;
+  place-items: center;
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 16px 26px rgba(32, 28, 25, 0.12);
+  font-size: 2rem;
+}
+
+.map-label {
+  position: absolute;
+  left: 50%;
+  bottom: 18px;
+  transform: translateX(-50%);
+  background: rgba(58, 51, 46, 0.92);
+  color: #fff;
+  border-radius: 999px;
+  padding: 9px 14px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.map-caption {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-top: 18px;
+}
+
+.map-caption strong {
+  font-size: 1.1rem;
+}
+
+.map-caption span {
+  font-size: 0.92rem;
   color: var(--gray-text);
+}
+
+@media (max-width: 900px) {
+  .join-wrap {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 560px) {
+  .store {
+    padding: 24px 16px 0;
+  }
+
+  .join-card {
+    padding: 20px;
+  }
+
+  .contact-list {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* ---------- Footer ---------- */

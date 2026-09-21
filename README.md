@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # BeanCrafters — Artisan Coffee Haven
 
 A React + Vite recreation of the "BeanCrafters" cafe landing page.
@@ -40,3 +41,7 @@ All styling is plain CSS in `src/index.css` (no framework), using CSS
 variables at the top for colors, fonts, radii, and max width — edit those
 to retheme the whole page. Images are placeholder photos from Unsplash;
 swap the `src` values in each component for your own assets.
+=======
+# BeanCrafters
+A modern coffee shop web application featuring a beautiful responsive UI, coffee product listings, shopping functionality, and an engaging user experience. Built with modern web technologies and designed for a smooth, user-friendly coffee ordering experience.
+>>>>>>> 9845acd70e70153bba2a5a95b3d08e4d3c21c605
