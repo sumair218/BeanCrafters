@@ -1,6 +1,6 @@
 const details = [
-  { title: 'Location', text: '7 Maple Street, Downtown' },
-  { title: 'Phone', text: '+1 (415) 202-5523' },
+  { title: 'Location', text: 'Gilgit, Pakistan' },
+  { title: 'Phone', text: '+92 300 1234567' },
   { title: 'Email', text: 'hello@beancrafters.com' },
   { title: 'Hours', text: 'Mon - Sat: 7:00 AM - 8:00 PM' },
   { title: 'Open', text: 'Walk-ins welcome every day' },
@@ -30,16 +30,22 @@ export default function StoreLocator() {
         </div>
 
         <div className="join-card map-card">
-          <div className="map-visual">
+          <a
+            className="map-visual"
+            href="https://www.google.com/maps/search/Gilgit+Pakistan"
+            target="_blank"
+            rel="noreferrer"
+            aria-label="Open Gilgit location on Google Maps"
+          >
             <div className="map-pin">📍</div>
             <div className="map-road road-1" />
             <div className="map-road road-2" />
             <div className="map-road road-3" />
             <div className="map-label">BeanCrafters</div>
-          </div>
+          </a>
           <div className="map-caption">
             <strong>Visit our café</strong>
-            <span>Fresh brews, handcrafted moments.</span>
+            <span>Gilgit • Fresh brews, handcrafted moments.</span>
           </div>
         </div>
       </div>

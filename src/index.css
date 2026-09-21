@@ -225,6 +225,35 @@ a {
   transition: transform 0.25s ease, box-shadow 0.25s ease;
   will-change: transform;
   transform: perspective(1200px) rotateX(0deg) rotateY(0deg) translateY(0px);
+  opacity: 0;
+  animation: orbitPopup 0.9s cubic-bezier(0.2, 0.9, 0.22, 1) forwards;
+}
+
+.card-one {
+  animation-delay: 0.15s;
+}
+
+.card-two {
+  animation-delay: 0.6s;
+}
+
+.card-three {
+  animation-delay: 1.05s;
+}
+
+@keyframes orbitPopup {
+  0% {
+    opacity: 0;
+    transform: perspective(1200px) scale(0.7) translateY(40px) rotateY(22deg) rotateZ(-10deg);
+  }
+  35% {
+    opacity: 0.8;
+    transform: perspective(1200px) scale(0.96) translateY(-8px) rotateY(8deg) rotateZ(6deg);
+  }
+  100% {
+    opacity: 1;
+    transform: perspective(1200px) scale(1) translateY(0) rotateY(0deg) rotateZ(0deg);
+  }
 }
 
 .collage-side {
@@ -619,16 +648,23 @@ a {
 
 .map-visual {
   position: relative;
+  display: block;
   flex: 1;
   min-height: 310px;
   border-radius: 22px;
   background:
-    linear-gradient(90deg, rgba(255,255,255,0.15) 0, rgba(255,255,255,0.15) 1px, transparent 1px, transparent 38px),
-    linear-gradient(rgba(255,255,255,0.15) 0, rgba(255,255,255,0.15) 1px, transparent 1px, transparent 38px),
-    #eae6dc;
-  background-size: 38px 38px, 38px 38px, auto;
+    linear-gradient(90deg, rgba(255,255,255,0.12) 0, rgba(255,255,255,0.12) 1px, transparent 1px, transparent 30px),
+    linear-gradient(rgba(255,255,255,0.12) 0, rgba(255,255,255,0.12) 1px, transparent 1px, transparent 30px),
+    linear-gradient(135deg, #f4ead8 0%, #e9e3d3 45%, #dfe9eb 100%);
+  background-size: 30px 30px, 30px 30px, auto;
   overflow: hidden;
   border: 1px solid rgba(32, 28, 25, 0.08);
+  text-decoration: none;
+  transition: transform 0.2s ease;
+}
+
+.map-visual:hover {
+  transform: translateY(-2px);
 }
 
 .map-road {
